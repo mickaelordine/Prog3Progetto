@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<AnchorPane prefHeight="100.0" prefWidth="220.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Pane prefHeight="110.0" prefWidth="220.0">
+            <children>
+                <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="189.0" text="Mail eliminata con successo!" />
+                <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="82.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@download-icon-complete+done+green+success+valid+icon-1320183462969251652_512.png" />
+                    </image></ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

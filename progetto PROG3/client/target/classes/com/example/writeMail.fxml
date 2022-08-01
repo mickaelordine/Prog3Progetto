@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mailClient.Controller.controllerWriterMail">
+   <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="600.0">
+                  <Label layoutX="9.0" layoutY="5.0" text="A:" />
+                  <TextField fx:id="reciverFieldWrite" layoutX="27.0" layoutY="1.0" prefHeight="26.0" prefWidth="562.0" promptText="inserisci la mail del ricevente" />
+                  <Label layoutX="4.0" layoutY="40.0" text="CC: " />
+                  <TextField fx:id="objFieldWrite" layoutX="27.0" layoutY="36.0" prefHeight="26.0" prefWidth="563.0" promptText="oggetto della mail" />
+            </AnchorPane>
+            <AnchorPane layoutY="72.0" prefHeight="328.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextArea fx:id="textFieldWrite" layoutX="8.0" layoutY="15.0" prefHeight="263.0" prefWidth="582.0" promptText="inserisci il testo della mail" />
+                  <Button fx:id="sendButton" layoutX="273.0" layoutY="285.0" mnemonicParsing="false" onAction="#sendMail" style="-fx-background-color: #00b1fd;" text="Invia" textFill="WHITE" />
+                  <Button fx:id="closeButton" layoutX="534.0" layoutY="285.0" mnemonicParsing="false" onAction="#closeWriter" style="-fx-background-color: #a3a3c2;" text="Chiudi" />
+               </children>
+            </AnchorPane>
+   </children>
+</AnchorPane>

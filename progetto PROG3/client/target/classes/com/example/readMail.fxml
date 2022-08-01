@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mailClient.Controller.controllerReaderMail">
+   <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+            <Label layoutX="5.0" layoutY="97.0" text="Data:" />
+            <Label layoutX="4.0" layoutY="73.0" text="CC: " />
+            <Label layoutX="5.0" layoutY="39.0" prefHeight="18.0" prefWidth="28.0" text="A :  " />
+                  <Label fx:id="senderRead" layoutX="54.0" layoutY="8.0" prefHeight="18.0" prefWidth="451.0" />
+                  <Label fx:id="dataRead" layoutX="53.0" layoutY="97.0" prefHeight="18.0" prefWidth="444.0" />
+                  <Label fx:id="objRead" layoutX="53.0" layoutY="72.0" prefHeight="18.0" prefWidth="451.0" />
+                  <Label fx:id="recieverRead" layoutX="54.0" layoutY="39.0" prefHeight="18.0" prefWidth="444.0" />
+                  <Button fx:id="replyButton" layoutX="534.0" layoutY="5.0" mnemonicParsing="false" onAction="#whichButtonClicked" style="-fx-background-color: #5c5c8a;" text="Reply" textFill="WHITE" />
+                  <Button fx:id="replyAllButton" layoutX="534.0" layoutY="39.0" mnemonicParsing="false" onAction="#whichButtonClicked" style="-fx-background-color: #5c5c8a;" text="ReplyAll" textFill="WHITE" />
+                  <Button fx:id="forwardButton" layoutX="534.0" layoutY="73.0" mnemonicParsing="false" onAction="#whichButtonClicked" style="-fx-background-color: #5c5c8a;" text="Forward" textFill="WHITE" />
+                  <Button fx:id="deleteButton" layoutX="534.0" layoutY="106.0" mnemonicParsing="false" onAction="#whichButtonClicked" style="-fx-background-color: #fa0000;" text="Delete" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="8.0" prefHeight="18.0" prefWidth="28.0" text="DA :" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="143.0" prefHeight="249.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="textRead" alignment="TOP_LEFT" layoutX="10.0" prefHeight="221.0" prefWidth="579.0" style="-fx-background-color: #e0e0eb;" />
+                  <Button fx:id="closeButton" layoutX="537.0" layoutY="229.0" mnemonicParsing="false" onAction="#whichButtonClicked" style="-fx-background-color: #a3a3c2;" text="chiudi" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+   </children>
+</AnchorPane>
