@@ -1,0 +1,46 @@
+
+THREAD:
+i thread necessari per il corretto funzionamento del programma sono 3 (wrostcase che ci siano 3 richieste in contemporanea), uno per ogni utente, poichè ogni volta che si effettua uno spostamento
+di FXML blocchiamo il thread di richiesta automatica del main controller e una volta che lo riapriamo verrà settato a true e ripartirà il
+ciclo di richiesta e il server avrà di nuovo a disposizione il thread quando chiudiamo ik socket.
+
+SYNCHRONIZED:
+Quando un thread richiama il metodo synchronized su un oggetto, tutti gli altri thread che richiamano quel metodo dopo sospendono la loro esecuzione
+fino a che non termina l’esecuzione del metodo (richiamato dal primo thread).
+Di conseguenza nel caso in cui ci siano più thread, come nel nostro caso, per non creare conflitti stabiliamo syncrhonized per evitare che venganno scambiati dei dati.
+
+
+
+
+
+SERVER:
+Risoluzione thread di attesa nel mandare una sendMail request:
+ho dovuto aggiungere Thread.sleep(150); a riga 59 in connection per permettere al thread server di processare correttamente le info inviate
+usiamo lo sleep per permettere al server di leggere correttamente i parametri che inviamo, senza continueremo a mandargli valori e
+la sequenza sarà sfasata, prendeva come parametro la mail e non la azione poichè senza attesa non era in grado di prendere il valore corretto
+
+
+scarica mail:
+-   Static in filemanager del server.
+-   nella creazione della mail nell'inbox, bisogna lasciare lo spazio vuoto prima della scrittura perchè nel while c'è un primo ciclo a vuoto,
+    e append = true fa in modo di continuare la scrittura lungo il file correttamante
+
+
+EMAIL obj:
+deve essere serializable e deve avere lo STESSO file path e nome di quello del server e viceversa.
+
+
+implemetazione delete mail:
+implementato uno swap tra un file temporaneo creato senza la mail da cancellare e il vecchio file che verrà sostituito da quello nuovo.
+per gestire le mail presenti nel model ho usato un arraylist statico per ogni utente presente nel servizio di posta che conterrà le mail
+del modello.
+
+
+SOCKET:
+usati nella classe connect per stabilire al server che azione deve fare attraverso il clientHandler, ogni volta che generiamo in printwriter out attraverso il socket lo chiudiamo
+successivamente la sleep che attende che il server riceva correttamente che action dovrà intraprendere.
+Sapremo sempre chi ha fatto richiesta poichè la prima informazione che prende il server attraverso il metodo connect() è il nostro username che salveremo in locale nel Thread server.
+
+
+
+

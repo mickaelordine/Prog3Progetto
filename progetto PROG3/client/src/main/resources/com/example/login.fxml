@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mailClient.Controller.controllerLogin">
+   <children>
+      <ListView prefHeight="400.0" prefWidth="607.0" />
+      <ImageView fx:id="mickael" fitHeight="150.0" fitWidth="200.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@userLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="emanuele" fitHeight="150.0" fitWidth="154.0" layoutX="229.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@userLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="gabriele" fitHeight="150.0" fitWidth="154.0" layoutX="453.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@userLogo.png" />
+         </image>
+      </ImageView>
+      <Button id="Mickael" fx:id="Mickael" alignment="CENTER" layoutX="41.0" layoutY="300.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #b3e0ff;" text="Mickael" />
+      <Button id="Emanuele" fx:id="Emanuele" alignment="CENTER" layoutX="268.0" layoutY="300.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="79.0" style="-fx-background-color: #b3e0ff;" text="Emanuele" />
+      <Button id="Gabriele" fx:id="Gabriele" alignment="CENTER" layoutX="497.0" layoutY="301.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: #b3e0ff;" text="Gabriele" />
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="26.0" prefHeight="26.0" prefWidth="607.0" text="Benvenuti nella Home di Accesso per gli utenti">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="60.0" prefHeight="80.0" prefWidth="607.0" text="Prego, selezionare un utente per utilizzare il servizio di posta elettroninca">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
